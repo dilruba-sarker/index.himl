@@ -1,0 +1,130 @@
+/* Set button colors */
+.buttons .fill {
+    --color: #a972cb;
+    --hover: #9b5ba5;
+  }
+  
+  .buttons .pulse {
+    --color: #ef6eae;
+    --hover: #f472b2;
+  }
+  
+  .buttons .close {
+    --color: #ff7f82;
+    --hover: #ff7276;
+  }
+  
+  .buttons .raise {
+    --color: #ffa260;
+    --hover: #ff984f;
+  }
+  
+  .buttons .up {
+    --color: #e4cb58;
+    --hover: #d7bb4c;
+  }
+  
+  .buttons .slide {
+    --color: #8fc866;
+    --hover: #96d377;
+  }
+  
+  .buttons .offset {
+    --color: #19bc8b;
+    --hover: #3dc685;
+  }
+  
+  /* Animate the size, inside */
+  .buttons .fill:hover,
+  .buttons .fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+  }
+  
+  /* Animate the size, outside */
+  .buttons .pulse:hover,
+  .buttons .pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--hover);
+    }
+  }
+  
+  /* Stack multiple shadows, one from the left, the other from the right */
+  .buttons .close:hover,
+  .buttons .close:focus {
+    box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+  }
+  
+  /* Size can also be negative; see how it's smaller than the element */
+  .buttons .raise:hover,
+  .buttons .raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+  }
+  
+  /* Animating from the bottom */
+  .buttons .up:hover,
+  .buttons .up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+  }
+  
+  /* And from the left */
+  .buttons .slide:hover,
+  .buttons .slide:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+  }
+  
+  /* Multiple shadows, one on the outside, another on the inside */
+  .buttons .offset {
+    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+  }
+  
+  .buttons .offset:hover,
+  .buttons .offset:focus {
+    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+  }
+  
+  /* Button styles */
+  .buttons button {
+    color: var(--color);
+    transition: 0.25s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+  }
+  
+  .buttons button:hover,
+  .buttons button:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+  
+  /* Pen styling, ignore */
+  body {
+    color: #fff;
+    background: hsl(227, 10%, 10%);
+    font: 300 1em 'Fira Sans', sans-serif;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  h1 {
+    font-weight: 400;
+  }
+  
+  code {
+    color: #e4cb58;
+    font: inherit;
+  }
+  
